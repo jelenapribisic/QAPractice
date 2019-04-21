@@ -47,5 +47,14 @@ namespace AutomationPractice.Helpers
             selectElement.SelectByText(option);
 
         }
+
+        public IWebElement TextPresentInElement (String text)
+
+        {
+            By textelement = By.XPath("//*[contains(text(),'" + text + "')]");
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
+            return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(textelement));
+
+        }
     }
 }
