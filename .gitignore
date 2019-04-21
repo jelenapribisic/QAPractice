@@ -1,2 +1,7 @@
 *.pdb
 *.dll
+<<<<<<< HEAD
+=======
+*.tmp
+*.suo
+>>>>>>> 4589b9317d754485229b80dbaac0ef1c5f7c0e1c
