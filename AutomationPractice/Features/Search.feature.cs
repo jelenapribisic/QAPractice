@@ -88,6 +88,25 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Usercan search for a term")]
+        [NUnit.Framework.CategoryAttribute("Search")]
+        public virtual void UsercanSearchForATerm()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Usercan search for a term", new string[] {
+                        "Search"});
+#line 15
+ this.ScenarioSetup(scenarioInfo);
+#line 16
+ testRunner.Given("user enters a \'dress\' search term", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 17
+ testRunner.When("user submits the search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
+ testRunner.Then("results for a \'dress\' search term are displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

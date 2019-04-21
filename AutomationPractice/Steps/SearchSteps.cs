@@ -6,7 +6,7 @@ namespace AutomationPractice.Steps
     [Binding]
     public class SearchSteps
     {
-        [Given(@"user submits the search")]
+        [StepDefinition(@"user submits the search")]
         public void GivenUserSubmitsTheSearch()
         {
             ScenarioContext.Current.Pending();
@@ -35,5 +35,19 @@ namespace AutomationPractice.Steps
         {
             ScenarioContext.Current.Pending();
         }
+
+        [Given(@"user enters a '(.*)' search term")]
+        public void GivenUserEntersASearchTerm(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+       
+        [Then(@"results for a '(.*)' search term are displayed")]
+        public void ThenResultsForASearchTermAreDisplayed(string p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
     }
 }

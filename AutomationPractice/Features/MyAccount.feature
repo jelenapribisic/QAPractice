@@ -27,4 +27,7 @@ Scenario: User can log in
 	Then user will be logged in 
 	And user's full name is displayed 
 
+	
+
+
 

@@ -82,10 +82,6 @@ namespace AutomationPractice.Steps
             ut.EnterTextInElement(cap.Alias, TestConstants.Alias);
             string Fullname = TestConstants.ADfirstname + " " + TestConstants.ADlastname;
             ScenarioContext.Current.Add(TestConstants.Fullname,Fullname);
-
-
-
-
         }
         [When(@"submits the sign up form")]
         public void WhenSubmitsTheSignUpForm()
