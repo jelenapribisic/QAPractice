@@ -15,6 +15,19 @@ namespace AutomationPractice.Pages
         public By lastname = By.Id("customer_lastname");
         //public By email = By.Id("email");//
         public By password = By.Id("passwd");
+        public By adfirstname = By.Id("firstname");
+        public By adlastname = By.Id("lastname");
+        public By Address1 = By.Id("address1");
+        public By City = By.Id("city");
+        public By State = By.Id("id_state");
+        public By PostCode = By.Id("postcode");
+        
+        public By Mobile = By.Id("phone_mobile");
+        public By Alias = By.Id("alias");
+        public By RegisterBtn = By.Id("submitAccount");
+
+
+
 
 
 

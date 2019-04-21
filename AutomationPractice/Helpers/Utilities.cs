@@ -12,6 +12,7 @@ namespace AutomationPractice.Helpers
     {
         readonly IWebDriver driver;
         private static readonly Random RandomName = new Random();
+
         public Utilities(IWebDriver driver)
         {
             this.driver = driver;   
@@ -37,5 +38,14 @@ namespace AutomationPractice.Helpers
             return string.Format("email{0}@malinator.com", RandomName.Next(10000, 100000));
         }
 
+        public void DropdownSelect (By select, string option)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(select));
+            var dropdown = driver.FindElement(select);
+            var selectElement = new SelectElement(dropdown);
+            selectElement.SelectByText(option);
+
+        }
     }
 }

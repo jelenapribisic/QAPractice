@@ -22,3 +22,5 @@ C:\Users\Jelena\Downloads\Visual Studio 2015\Visual Studio 2015\Projects\Automat
 C:\Users\Jelena\Downloads\Visual Studio 2015\Visual Studio 2015\Projects\AutomationPractice\AutomationPractice\obj\Debug\AutomationPractice.csprojResolveAssemblyReference.cache
 C:\Users\Jelena\Downloads\Visual Studio 2015\Visual Studio 2015\Projects\AutomationPractice\AutomationPractice\obj\Debug\AutomationPractice.dll
 C:\Users\Jelena\Downloads\Visual Studio 2015\Visual Studio 2015\Projects\AutomationPractice\AutomationPractice\obj\Debug\AutomationPractice.pdb
+C:\Users\Jelena\Downloads\Visual Studio 2015\Visual Studio 2015\Projects\AutomationPractice\AutomationPractice\bin\Debug\WebDriver.Support.dll
+C:\Users\Jelena\Downloads\Visual Studio 2015\Visual Studio 2015\Projects\AutomationPractice\AutomationPractice\bin\Debug\WebDriver.Support.xml
