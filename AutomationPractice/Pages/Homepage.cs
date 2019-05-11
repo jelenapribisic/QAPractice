@@ -13,6 +13,7 @@ namespace AutomationPractice.Pages
         readonly IWebDriver driver;
 
         public By signIn = By.ClassName("login");
+        public By search = By.Id("search_query_top");
         public Homepage(IWebDriver driver)
         {
             this.driver = driver;
@@ -20,6 +21,6 @@ namespace AutomationPractice.Pages
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.Id("index")));
 
         }
-        
+     
     }
 }

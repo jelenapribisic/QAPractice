@@ -53,8 +53,15 @@ namespace AutomationPractice.Helpers
         {
             By textelement = By.XPath("//*[contains(text(),'" + text + "')]");
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
+
             return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(textelement));
 
         }
+        public string ReturnTextFromElements(By selector)
+        {
+            return driver.FindElement(selector).GetAttribute("textContent");
+        }
+        //Utilities ut = new Utilities (Driver);
+         
     }
 }
