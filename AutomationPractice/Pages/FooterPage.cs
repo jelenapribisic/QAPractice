@@ -12,7 +12,6 @@ namespace AutomationPractice.Pages
     class FooterPage
     {
         readonly IWebDriver driver;
-        private string page;
 
         // public Footer = By.ClassName("footer");
         //public Footer(IWebDriver driver)
@@ -20,7 +19,7 @@ namespace AutomationPractice.Pages
         {
             this.driver = driver;
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.Id("footer-container")));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.ClassName("footer-container")));
         }
         public void ClickOnInformationLink(string title)
         {
@@ -37,10 +36,20 @@ namespace AutomationPractice.Pages
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
             return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(Informationlink)).Displayed;
         }
-
-        public static implicit operator FooterPage(Footerpage v)
+        public void ClickOnMyaccountLink(string title)
         {
-            throw new NotImplementedException();
+            By link = By.CssSelector(".toggle-footer [title='" + title + "']");
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(link)).Click();
+
+        }
+
+
+        public bool MyaccountpageElementDisplayed(string page)
+        {
+            By Informationlink = By.XPath("//*[@class='navigation_page'][contains(text(),'" + page + "')]");
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
+            return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(Informationlink)).Displayed;
         }
     }
 }

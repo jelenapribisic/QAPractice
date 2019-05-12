@@ -66,19 +66,19 @@ namespace AutomationPractice.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Usercan openlinks under Information section")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("Footer")]
         [NUnit.Framework.TestCaseAttribute("Specials", "Price drop", null)]
-        [NUnit.Framework.TestCaseAttribute("New Products", "", null)]
-        [NUnit.Framework.TestCaseAttribute("Best sellers", "", null)]
-        [NUnit.Framework.TestCaseAttribute("Our Stores", "", null)]
-        [NUnit.Framework.TestCaseAttribute("Contact Us", "", null)]
-        [NUnit.Framework.TestCaseAttribute("Terms and conditions of use", "", null)]
-        [NUnit.Framework.TestCaseAttribute("About us", "", null)]
-        [NUnit.Framework.TestCaseAttribute("Sitemap", "", null)]
+        [NUnit.Framework.TestCaseAttribute("New Products", "New products", null)]
+        [NUnit.Framework.TestCaseAttribute("Best sellers", "Best sellers", null)]
+        [NUnit.Framework.TestCaseAttribute("Our Stores", "Our store", null)]
+        [NUnit.Framework.TestCaseAttribute("Contact Us", "Contact", null)]
+        [NUnit.Framework.TestCaseAttribute("Terms and conditions of use", "Terms and conditions of use", null)]
+        [NUnit.Framework.TestCaseAttribute("About us", "About us", null)]
+        [NUnit.Framework.TestCaseAttribute("Sitemap", "Sitemap", null)]
         public virtual void UsercanOpenlinksUnderInformationSection(string informationLink, string page, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "mytag"};
+                    "Footer"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -90,6 +90,38 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When(string.Format("user clicks on \'{0}\' option", informationLink), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
  testRunner.Then(string.Format("correct \'{0}\' is displayed", page), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User can open links under My Account")]
+        [NUnit.Framework.CategoryAttribute("Footer")]
+        [NUnit.Framework.TestCaseAttribute("My orders", "Order history", null)]
+        [NUnit.Framework.TestCaseAttribute("My Credit Slips", "Credit Slips", null)]
+        [NUnit.Framework.TestCaseAttribute("My addreses", "My addreses", null)]
+        [NUnit.Framework.TestCaseAttribute("My personal info", "Your personal information", null)]
+        public virtual void UserCanOpenLinksUnderMyAccount(string link, string page, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Footer"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User can open links under My Account", @__tags);
+#line 23
+this.ScenarioSetup(scenarioInfo);
+#line 24
+    testRunner.Given("user opens sign in page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+ testRunner.And("enters correct credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
+ testRunner.And("user submits the login form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
+ testRunner.When(string.Format("user clicks on \'{0}\' option under Myaccount section", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 28
+ testRunner.Then(string.Format("correct \'{0}\' under Myaccount is displayed", page), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
